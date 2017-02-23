@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+  <script type="text/javascript">
+  /*
+	function a(c){
+		console.log(this);
+    this.b = c;
+    this.d =function(){
+        alert(this.b);
+		}
+	}
+	var obj = new a('test');
+	console.log("obj"+obj);
+	obj.d;
+	console.log("obj.d"+obj.d);
+	alert(typeof obj.prototype);//undefine
+	alert(typeof a.prototype);//object
+	console.log(this);
+	*/
+	function a(c){
+		console.log("构造函数a:"+this);
+    this.b = c;
+    
+	}
+	a.prototype.test = function(){
+		console.log("a.prototype"+this);
+		alert(this.b);
+	}
+	var obj = function (){}
+	obj.prototype = new a('test');
+	obj.prototype.test1 =function(){
+		alert(22222);
+	}
+	var t = new obj('test');
+	t.test();//alert('test');
+  </script>
+ </body>
+</html>

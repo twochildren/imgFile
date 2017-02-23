@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+div {
+   /*  border: 1px solid #aaa; */
+}
+body {
+    font-family: 'SimHei';
+    background: #fff;
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    /*width: 80%;*/
+}
+.container:before { 
+    content: ' ';
+    display: table;
+}
+.container:after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+.content{
+	margin:30px auto;
+}
+.content div{
+	width:80%;
+}
+h3{
+	float:left;
+	margin:30px;
+	color:#3385ff;
+}
+textarea{
+	resize:none;
+	width:80%;
+	
+}
+/* PC */
+@media screen and (min-width: 992px){
+    body {
+        font-size: 14px;
+    }
+    .container {   
+        width: 970px;
+    }
+}
+/* PAD */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    body {
+        font-size: 12px;
+    }
+    .container {    
+        width: 750px;
+    }
+}
+/* phone */
+@media screen and (max-width: 767px){
+    body {
+        font-size: 10px;
+    }
+    .container {  
+        width: 100%;
+    }
+	h3{
+		width:100%;
+		
+	}
+	textarea{
+		max-width:70%;
+		margin-left:30px;
+	}
+	.content div{
+		margin-left:30px;
+	}
+	.content img{
+		max-width:100%;
+	}
+}

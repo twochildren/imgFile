@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+div {
+    /* border: 1px solid #aaa; */
+}
+body {
+    font-family: 'SimHei';
+    background: #fff;
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    /*width: 80%;*/
+}
+.container:before { 
+    content: ' ';
+    display: table;
+}
+.container:after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+.cols:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.col {
+    float: left;
+    padding: 0 5px;
+	position:relative;
+	z-index:0;
+}
+
+.col div{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:10px;
+	height:80%;
+	color:#fff;
+	font-size:16px;
+}
+img {
+    /*max-width: 100%;*/
+    width: 100%;
+}
+.show{
+	display:block;
+}
+.hide{
+	display:none;
+}
+hr{
+	margin:10px auto;
+}
+.close{
+	color:#fff;
+	font-size:xx-large;
+	cursor:pointer;
+	float:right;
+	margin:30px 30px;
+}
+.modal{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+    opacity:0.5;  
+    background-color: #000000;
+}
+.modal-dialog{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	width:50%;
+}
+@media screen and (min-width: 992px){
+    body {
+        font-size: 14px;
+    }
+    .container {   
+        width: 970px;
+    }
+    .col {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    body {
+        font-size: 12px;
+    }
+    .container {    
+        width: 750px;
+    }
+    .col {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    body {
+        font-size: 10px;
+    }
+    .container {  
+        width: 100%;
+    }
+    .col {
+        width: 100%;
+    }
+}

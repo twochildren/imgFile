@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+ </head>
+ <body>
+  <ul class="list">
+  	<li class="list_item">111</li>
+  	<li class="list_item">222</li>
+  	<li class="list_item">333</li>
+  </ul>
+  <div>
+	<button class="btn">点我呀1</button>
+	<button class="btn">点我呀2</button>
+  </div>
+
+  
+  <script src="js/jquery-1.11.3.js"></script>
+  <script>
+	$('.list').on('click','li',function(e){
+		console.log(this);
+		console.log(e.target);
+	});
+	var btn=document.getElementsByClassName("btn");
+	console.log(btn);
+	function dianwo(e){
+		console.log("e.target是:"+e.target);
+	}
+	btn[1].addEventListener('click',dianwo,false);//正确
+	btn.addEventListener('click',dianwo,false);//报错btn.addEventListener is not a function，因为btn是一个数组
+  </script>
+ </body>
+</html>
